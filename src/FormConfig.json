@@ -1,0 +1,137 @@
+{
+  "nodes": [
+    {
+      "id": "field_a",
+      "type": "FIELD",
+      "subType": "STRING",
+      "label": "Label: A0",
+      "description": "Description: Input String data",
+      "size": "XL"
+    },
+    {
+      "id": "field_a1",
+      "type": "FIELD",
+      "subType": "STRING",
+      "label": "Label: A1",
+      "description": "Description: Input String data",
+      "size": "XL"
+    },
+    {
+      "id": "field_b",
+      "type": "FIELD",
+      "subType": "NUMBER",
+      "regex": "[0-9]",
+      "label": "Label: B",
+      "size": "M"
+    },
+    {
+      "id": "field_c",
+      "type": "FIELD",
+      "subType": "OPTIONS",
+      "value": "option_1",
+      "label": "Label: C",
+      "description": "Description: Select to change options",
+      "size": "XL",
+      "options": [
+        {
+          "label": "Label: Oprtion 1",
+          "value": "option_1"
+        },
+        {
+          "label": "Label: Oprtion 2",
+          "value": "option_2"
+        },
+        {
+          "label": "Label: Oprtion 3",
+          "value": "option_3"
+        },
+        {
+          "label": "Label: Oprtion 4",
+          "value": "option_4"
+        }
+      ]
+    },
+    {
+      "id": "field_d",
+      "type": "FIELD",
+      "subType": "NUMBER",
+      "label": "Label: D",
+      "size": "S"
+    },
+    {
+      "id": "field_e",
+      "type": "FIELD",
+      "subType": "STRING",
+      "regex": "[0-9]",
+      "label": "Label: E0",
+      "size": "S"
+    },
+    {
+      "id": "field_f",
+      "type": "FIELD",
+      "required": true,
+      "subType": "NUMBER",
+      "label": "Label: E1",
+      "size": "M"
+    },
+    {
+      "id": "field_g",
+      "type": "FIELD",
+      "subType": "NUMBER",
+      "label": "Label: E2",
+      "size": "S"
+    },
+    {
+      "id": "field_h",
+      "type": "FIELD",
+      "subType": "NUMBER",
+      "description": "Description: Number Value",
+      "label": "Label: H",
+      "size": "XL"
+    }
+  ],
+  "edges": [
+    { "from": "group_0", "to": "field_a" },
+    { "from": "group_0", "to": "field_a1" },
+    { "from": "group_1", "to": "field_e" },
+    { "from": "group_1", "to": "field_f" },
+    { "from": "group_1", "to": "field_g" },
+    {
+      "from": "field_c",
+      "to": "field_e",
+      "condition": [{ "value": "option_1" }]
+    },
+    {
+      "from": "field_c",
+      "to": "field_f",
+      "condition": [{ "value": "option_1" }]
+    },
+    {
+      "from": "field_c",
+      "to": "field_g",
+      "condition": [{ "value": "option_1" }]
+    },
+    {
+      "from": "field_c",
+      "to": "field_d",
+      "condition": [{ "value": "option_2" }]
+    },
+    {
+      "from": "field_c",
+      "to": "field_d",
+      "condition": [{ "value": "option_3" }]
+    }
+  ],
+  "groups": [
+    {
+      "id": "group_0",
+      "type": "GROUP",
+      "label": "Group A"
+    },
+    {
+      "id": "group_1",
+      "type": "GROUP",
+      "label": null
+    }
+  ]
+}

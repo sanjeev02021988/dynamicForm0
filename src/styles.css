@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 20px 10px;
+}
+
+.GroupWrapper {
+  display: block;
+  width: 100%;
+}
+
+/* CSS: START WithLabel */
+.GroupWrapper.WithLabel {
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+}
+
+.GroupWrapper.WithLabel .InputWrapper {
+  padding-top: 5px;
+}
+
+.GroupWrapper.WithLabel .Label {
+  display: flex;
+  position: relative;
+  top: -10px;
+  left: 20px;
+  background-color: white;
+  max-width: max-content;
+  padding: 0 10px;
+}
+/* CSS: END WithLabel */
+
+.GroupWrapper .Group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.InputWrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.InputWrapper .mantine-Input-wrapper,
+.InputWrapper .mantine-Select-root,
+.InputWrapper .mantine-Select-wrapper {
+  width: 100%;
+}
+
+button {
+  margin-top: 10px;
+  margin-left: 20px;
+  display: flex !important;
+}
